@@ -5,7 +5,7 @@ function getCompletedTodos(){
 	var result = null
 	$.ajax({
 		type: "GET",
-		url: server + "todo-completed",
+		url: todolist_server + "?completed=true",
 	        async: false,
 		success: function(data){
 			result = data;
@@ -18,7 +18,7 @@ function getIncompleteTodos(){
 	var result = null
 	$.ajax({
 		type: "GET",
-		url: server + "todo-incomplete",
+		url: todolist_server + "?completed=false",
 	        async: false,
 		success: function(data){
 			result = data;
