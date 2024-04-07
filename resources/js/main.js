@@ -75,7 +75,7 @@ function addItemToBackend (value) {
 			console.log(data);
                 }
         });
-        return result.Id;
+        return result.ID;
 }
 
 function renderTodoList() {
@@ -83,13 +83,13 @@ function renderTodoList() {
 
   for (var i = 0; i < data.todo.length; i++) {
     var value = data.todo[i].Description;
-    var id = data.todo[i].Id;
+    var id = data.todo[i].ID;
     addItemToDOM(value, id);
   }
 
   for (var j = 0; j < data.completed.length; j++) {
     var value = data.completed[j].Description;
-    var id = data.completed[j].Id;
+    var id = data.completed[j].ID;
     addItemToDOM(value, id, true);
   }
 }
